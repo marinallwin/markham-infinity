@@ -6,11 +6,12 @@
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+    /* padding-left: 60px; */
 }
 
 /* SECTION HEADERS */
@@ -24,7 +25,7 @@
 
 .sectionHeader h2 {
     color: #3d1f5c;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     letter-spacing: 0.5px;
     padding-bottom: 12px;

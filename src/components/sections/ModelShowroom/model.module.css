@@ -20,7 +20,7 @@
 
 .header h2 {
     color: #3d1f5c;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     letter-spacing: 0.5px;
     padding-bottom: 12px;
@@ -34,7 +34,7 @@
     position: absolute;
     left: 0;
     bottom: -22px;
-rotate: -6deg;
+    rotate: -6deg;
     width: 0;
     height: 0;
     border-left: 20px solid #999;
