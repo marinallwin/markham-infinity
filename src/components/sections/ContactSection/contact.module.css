@@ -1,0 +1,122 @@
+.contactMain {
+  height: 400px;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.contactTop {
+  display: flex;
+  gap: 20px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dashed {
+  height: 60px;
+  border-right: 2px dashed grey;
+}
+
+h3,
+h5 {
+  color: white;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.iconContainer img {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background-position: center;
+}
+.contactBottom {
+  display: flex;
+  gap: 50px;
+}
+
+.tile {
+  width: 230px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.tile h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: grey;
+  transition: color 0.3s ease;
+}
+
+.tile:hover {
+  transform: translateY(-30px);
+  background-color: #5f3a93; /* purple */
+}
+
+.tile:hover h3 {
+  color: white;
+}
+
+/* Triangle */
+.tile:hover::before {
+  content: "";
+  position: absolute;
+
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 0;
+  height: 0;
+
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #5f3a93;
+}
+
+.tile img {
+  height: 20px;
+  width: 20px;
+}
