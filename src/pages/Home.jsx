@@ -17,13 +17,13 @@ function Home() {
       <main>
         {/* <HeroSection /> */}
 
-        {/* <QuickActions /> */}
+        <QuickActions />
 
-        {/* <ModelShowroom /> */}
+        <ModelShowroom />
 
         <WelcomeSection />
 
-        {/* <MediaSection /> */}
+        <MediaSection />
 
         <ContactSection />
       </main>

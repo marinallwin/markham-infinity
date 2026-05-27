@@ -1,0 +1,279 @@
+.mediaSection {
+    width: 100%;
+    padding: 80px 0;
+    background: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+/* SECTION HEADERS */
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sectionHeader h2 {
+    color: #3d1f5c;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #ccc;
+    position: relative;
+    padding-left: 0;
+}
+
+.sectionHeader h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -22px;
+    rotate: 91deg;
+    width: 0;
+    height: 0;
+    border-left: 20px solid #999;
+    border-top: 20px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+.navButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.navBtn {
+    width: 35px;
+    height: 35px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.navBtn img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.navBtn:hover {
+    background: #e0e0e0;
+}
+
+/* NEWS SECTION */
+
+.newsSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.newsTitle {
+    font-size: 16px;
+    color: #888;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.newsImage {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.newsImage img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.newsDescription {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+
+.readMore {
+    color: #3d1f5c;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.readMore:hover {
+    opacity: 0.7;
+}
+
+/* VIDEO SECTION */
+
+.videoSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.videoContent {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.videoTitle {
+    font-size: 16px;
+    color: #888;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.videoPlaceholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.playButton {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    color: #333;
+    z-index: 10;
+    transition: all 0.3s ease;
+    padding-left: 5px;
+}
+
+.videoPlaceholder:hover .playButton {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.videoOverlay {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+    z-index: 5;
+}
+
+.videoText {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.videoTextLarge {
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 968px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .sectionHeader h2 {
+        font-size: 24px;
+    }
+
+    .videoTextLarge {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mediaSection {
+        padding: 60px 0;
+    }
+
+    .sectionHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .sectionHeader h2 {
+        font-size: 22px;
+    }
+
+    .videoText {
+        font-size: 14px;
+    }
+
+    .videoTextLarge {
+        font-size: 20px;
+    }
+
+    .videoOverlay {
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionHeader h2 {
+        font-size: 20px;
+    }
+
+    .newsTitle,
+    .videoTitle {
+        font-size: 14px;
+    }
+
+    .newsDescription {
+        font-size: 13px;
+    }
+
+    .playButton {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .videoText {
+        font-size: 12px;
+    }
+
+    .videoTextLarge {
+        font-size: 18px;
+    }
+}

@@ -1,7 +1,10 @@
 .contactMain {
   height: 400px;
   width: 100%;
-  background-color: red;
+  background-image: url('../../../assets/map.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,14 +13,20 @@
   gap: 80px;
 }
 
-.background {
+.contactMain::before {
+  content: '';
   position: absolute;
   inset: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+.contactTop,
+.contactBottom {
+  position: relative;
+  z-index: 2;
 }
 
 .contactTop {
@@ -61,6 +70,7 @@ h5 {
   border-radius: 100%;
   background-position: center;
 }
+
 .contactBottom {
   display: flex;
   gap: 50px;
@@ -92,7 +102,8 @@ h5 {
 
 .tile:hover {
   transform: translateY(-30px);
-  background-color: #5f3a93; /* purple */
+  background-color: #5f3a93;
+  /* purple */
 }
 
 .tile:hover h3 {

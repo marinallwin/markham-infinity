@@ -4,6 +4,7 @@ import styles from "./topbar.module.css";
 import fb from "../../../assets/fb.png";
 import yt from "../../../assets/yt.png";
 import tw from "../../../assets/tw.png";
+import location from "../../../assets/location.png";
 
 import call from "../../../assets/call.png";
 import tollfree from "../../../assets/toll-free.png";

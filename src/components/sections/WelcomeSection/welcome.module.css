@@ -1,19 +1,7 @@
-/* .welcomeSection {
-  width: 100%;
-  height: 500px;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-
 .welcomeSection {
   position: relative;
-  overflow: hidden;
-
   width: 100%;
-  padding: 100px 0 140px;
-
+  padding: 80px 0 150px;
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
@@ -21,213 +9,178 @@
 
 .container {
   width: 90%;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
+  margin-bottom: 100px;
 }
 
 .header h2 {
-  color: #5a2d82;
-  font-size: 30px;
+  color: #3d1f5c;
+  font-size: 42px;
   font-weight: 700;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #5a2d82;
+  letter-spacing: 0.5px;
+  padding-bottom: 15px;
+  border-bottom: 4px solid #3d1f5c;
   width: max-content;
+  position: relative;
 }
 
-
+.header h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -24px;
+    rotate: -3deg;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #3d1f5c;
+  border-bottom: 20px solid transparent;
+  border-top: 4px solid transparent;
+}
 
 .header p {
-  width: 95%;
-  font-size: 18px;
-  line-height: 1.9;
-  color: #666;
+  width: 90%;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #888;
+  font-weight: 400;
 }
-
-/* BIG BACKGROUND DIAMONDS */
-
-.leftDiamond,
-.rightDiamond {
-  position: absolute;
-
-  width: 420px;
-  height: 420px;
-
-  background: rgba(255, 255, 255, 0.25);
-
-  transform: rotate(45deg);
-
-  z-index: 0;
-}
-
-.leftDiamond {
-  left: 150px;
-  top: 450px;
-}
-
-.rightDiamond {
-  right: 150px;
-  top: 450px;
-}
-
-/* CARDS SECTION */
 
 .cardsWrapper {
-  margin-top: 180px;
-
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  gap: 20px;
-
+  align-items: center;
+  gap: 10px;
   position: relative;
   z-index: 2;
 }
 
-/* SIDE CARDS */
-
-.card {
-  width: 420px;
-  min-height: 400px;
-
-  padding: 35px 25px;
-
-  background-size: cover;
-  background-position: center;
-
-  text-align: center;
-}
-
-.card img {
-  width: 75px;
-  margin-bottom: 20px;
-}
-
-.card h3 {
-  font-size: 26px;
-  color: #3e3e3e;
-  margin-bottom: 18px;
-  line-height: 1.4;
-}
-
-.card p {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.8;
-}
-
-/* CENTER SECTION */
-
-.centerWrapper {
+.diamondCard {
   position: relative;
-}
-
-/* SMALL TOP DIAMOND */
-
-.smallDiamond {
-  width: 85px;
-  height: 85px;
-
-  background: #ece5f5;
-
-  position: absolute;
-
-  left: 50%;
-  top: -45px;
-
-  transform: translateX(-50%) rotate(45deg);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.smallDiamondInner {
-  transform: rotate(-45deg);
-}
-
-.smallDiamondInner img {
-  width: 40px;
-}
-
-/* CENTER CARD */
-
-.centerCard {
-  width: 260px;
-  min-height: 320px;
-
-  padding: 80px 30px 40px;
-
-  background-size: cover;
-  background-position: center;
-
-  text-align: center;
-
-  color: white;
-}
-
-.centerCard h3 {
-  font-size: 28px;
-  line-height: 1.4;
-  margin-bottom: 25px;
-}
-
-.centerCard p {
-  font-size: 17px;
-  line-height: 1.8;
-  margin-bottom: 25px;
-}
-
-.centerCard button {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
+  width: 400px;
+  height: 400px;
   cursor: pointer;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 1200px) {
-  .cardsWrapper {
-    gap: 50px;
-  }
-
-  .header h2 {
-    font-size: 48px;
-  }
+/* Background image */
+.diamondBg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.35s ease;
 }
 
-@media (max-width: 992px) {
-  .cardsWrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .leftDiamond,
-  .rightDiamond {
-    display: none;
-  }
+/* Default and hover backgrounds */
+.defaultBg,
+.hoverBg {
+  position: absolute;
+  inset: 0;
 }
 
-@media (max-width: 768px) {
-  .header h2 {
-    font-size: 36px;
-  }
+.hoverBg {
+  opacity: 0;
+}
 
-  .header p {
-    font-size: 18px;
-  }
+.diamondCard:hover .defaultBg {
+  opacity: 0;
+}
 
-  .centerCard,
-  .card {
-    width: 100%;
-    max-width: 320px;
-  }
+.diamondCard:hover .hoverBg {
+  opacity: 1;
+}
+
+/* CONTENT */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+/* Static icons */
+.staticIcon,
+.centerIcon {
+  width: 70px;
+}
+
+/* TEXT */
+.content h3 {
+  font-size: 20px;
+  color: #444;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.content p {
+  font-size: 14px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.content h6 {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  font-size: 14px;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+/* Hover text */
+.diamondCard:hover .content h3,
+.diamondCard:hover .content p,
+.diamondCard:hover .content h6 {
+  color: white;
+}
+
+/* Read more icon */
+.readmore {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+/* CENTER CARD */
+.purpleContent {
+  width: 62%;
+  top: 51%;
+  gap: 18px;
+}
+
+.purpleContent h3 {
+  color: #444;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.purpleContent p {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.7;
+  width: 100%;
+  transition: color 0.3s ease;
+}
+
+.purpleContent h6 {
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #444;
+  transition: color 0.3s ease;
 }

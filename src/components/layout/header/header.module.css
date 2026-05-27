@@ -20,7 +20,7 @@
 
 .container {
   display: flex;
-  width: 80%;
+  width: 85%;
 }
 
 .navContainer {
@@ -29,9 +29,7 @@
   width: 100%;
 }
 
-.nav {
-
-}
+.nav {}
 
 .list {
   display: flex;
@@ -48,6 +46,7 @@
   font-size: 15px;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .dashed {
@@ -57,4 +56,17 @@
 .nav a {
   text-decoration: none;
   color: darkgrey;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.arrowIcon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
 }

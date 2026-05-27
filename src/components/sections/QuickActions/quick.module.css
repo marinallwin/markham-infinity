@@ -1,0 +1,104 @@
+.sectionMain {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px;
+}
+
+.quickContainer {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    height: 180px;
+    width: 180px;
+    border-radius: 100%;
+    border: 5px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+/* Downward triangle at bottom (default state) */
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid grey;
+    transition: all 0.3s ease;
+}
+
+/* Hover state */
+.card:hover {
+    background: #5f3a93;
+    border-color: #5f3a93;
+}
+
+/* Hide bottom triangle on hover */
+.card:hover::after {
+    opacity: 0;
+}
+
+/* Upward triangle at top on hover */
+.card:hover::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #5f3a93;
+}
+
+.card h4 {
+    font-size: 16px;
+    width: 60%;
+    text-align: center;
+    font-weight: 500;
+    color: grey;
+    line-break: auto;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover h4 {
+    opacity: 0;
+}
+
+.card img {
+    transition: all 0.3s ease;
+}
+
+.card:hover img {
+    filter: brightness(0) invert(1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dashed {
+    border-right: 2px dashed grey;
+    position: relative;
+}
+
+.dashedOne {
+    position: absolute;
+}
