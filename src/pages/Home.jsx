@@ -15,20 +15,19 @@ function Home() {
       <Header />
 
       <main>
-        {/* <HeroSection /> */}
 
-        {/* <QuickActions /> */}
+        <QuickActions />
 
-        {/* <ModelShowroom /> */}
+        <ModelShowroom />
 
-        {/* <WelcomeSection /> */}
+        <WelcomeSection />
 
-        {/* <MediaSection /> */}
+        <MediaSection />
 
-        {/* <ContactSection /> */}
+        <ContactSection />
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
