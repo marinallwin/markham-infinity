@@ -8,7 +8,6 @@ function Navbar() {
 
   return (
     <nav className={styles.nav}>
-      {/* Hamburger Icon - Only show when menu is closed */}
       {!isMenuOpen && (
         <button
           className={styles.hamburger}
@@ -21,10 +20,8 @@ function Navbar() {
         </button>
       )}
 
-      {/* Full Screen Menu Overlay */}
       {isMenuOpen && (
         <div className={styles.menuOverlay}>
-          {/* Close Button */}
           <button
             className={styles.closeButton}
             onClick={() => setIsMenuOpen(false)}
@@ -83,7 +80,6 @@ function Navbar() {
         </div>
       )}
 
-      {/* Desktop Menu */}
       <ul className={styles.desktopList}>
         <li className={styles.listItem}>
           <Link to="/">Home</Link>

@@ -8,13 +8,12 @@ function MediaSection() {
   return (
     <section className={styles.mediaSection}>
       <div className={styles.container}>
-        {/* NEWS AND EVENTS */}
         <div className={styles.newsSection}>
           <div className={styles.sectionHeader}>
             <h2>NEWS AND EVENTS</h2>
             <div className={styles.navButtons}>
-                <img src={video_left_arw} alt="Previous" />
-                <img src={video_right_arw} alt="Next" />
+              <img src={video_left_arw} alt="Previous" />
+              <img src={video_right_arw} alt="Next" />
             </div>
           </div>
 
@@ -32,7 +31,6 @@ function MediaSection() {
           </div>
         </div>
 
-        {/* PROMOTIONAL VIDEO */}
         <div className={styles.videoSection}>
           <div className={styles.sectionHeader}>
             <h2>PROMOTIONAL VIDEO</h2>
@@ -43,13 +41,12 @@ function MediaSection() {
               Infiniti Canada fan surprised with Trip of a Lifetime
             </p>
             <div className={styles.videoPlaceholder}>
-
               <video
                 className={styles.videoPlayer}
                 src={video}
                 controls
                 autoPlay
-                // muted
+                muted
                 loop
               />
             </div>

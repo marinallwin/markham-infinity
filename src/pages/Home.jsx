@@ -6,7 +6,6 @@ import MediaSection from "../components/sections/MediaSection/MediaSection";
 import WelcomeSection from "../components/sections/WelcomeSection/WelcomeSection";
 import ModelShowroom from "../components/sections/ModelShowroom/ModelShowroom";
 import QuickActions from "../components/sections/QuickActions/QuickActions";
-import HeroSection from "../components/sections/HeroSection/HeroSection";
 
 
 function Home() {

@@ -214,7 +214,6 @@ h5 {
   }
 }
 
-/* TABLET - 480px to 767px */
 @media (max-width: 767px) and (min-width: 480px) {
   .contactMain {
     min-height: 550px;
@@ -293,7 +292,6 @@ h5 {
   }
 }
 
-/* MOBILE - 320px to 479px */
 @media (max-width: 479px) {
   .contactMain {
     min-height: 600px;

@@ -17,17 +17,16 @@ function QuickActions() {
         <div className={styles.card}>
           <img src={cta_01} alt='new vehicles' />
           <h4>Shop New Vehicles</h4>
-          <img src={shadow} alt='shadow' className={styles.shadow}/>
+          <img src={shadow} alt='shadow' className={styles.shadow} />
         </div>
 
         <span className={styles.dashed}>
-          {/* <img src={Dotted_01} alt='dashed line' className={styles.dashedOne}/> */}
         </span>
 
         <div className={styles.card}>
           <img src={cta_02} alt='used vehicles' />
           <h4>Shop Used Vehicles</h4>
-          <img src={shadow} alt='shadow' className={styles.shadow}/>
+          <img src={shadow} alt='shadow' className={styles.shadow} />
         </div>
 
         <span className={styles.dashed}></span>
@@ -35,7 +34,7 @@ function QuickActions() {
         <div className={styles.card}>
           <img src={cta_03} alt='service' />
           <h4>Shop new vehicles</h4>
-          <img src={shadow} alt='shadow' className={styles.shadow}/>
+          <img src={shadow} alt='shadow' className={styles.shadow} />
         </div>
 
         <span className={styles.dashed}></span>
@@ -43,7 +42,7 @@ function QuickActions() {
         <div className={styles.card}>
           <img src={cta_04} alt='gifts' />
           <h4>Specials</h4>
-          <img src={shadow} alt='shadow' className={styles.shadow}/>
+          <img src={shadow} alt='shadow' className={styles.shadow} />
         </div>
       </div>
     </section>

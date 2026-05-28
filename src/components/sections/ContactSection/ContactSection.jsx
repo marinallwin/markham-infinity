@@ -57,7 +57,6 @@ function ContactSection() {
           <h3>Location</h3>
         </div>
       </div>
-      {/* <img className={styles.background} src={map} alt="map" /> */}
     </section>
   );
 }

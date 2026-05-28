@@ -13,7 +13,6 @@
     gap: 60px;
 }
 
-/* SECTION HEADERS */
 .sectionHeader {
     display: flex;
     justify-content: space-between;
@@ -217,7 +216,6 @@
     display: block;
 }
 
-/* TABLET LANDSCAPE - 768px to 1023px */
 @media (max-width: 1023px) and (min-width: 768px) {
     .mediaSection {
         padding: 70px 0;
@@ -281,7 +279,6 @@
     }
 }
 
-/* TABLET - 480px to 767px */
 @media (max-width: 767px) and (min-width: 480px) {
     .mediaSection {
         padding: 60px 0;
@@ -354,7 +351,6 @@
     }
 }
 
-/* MOBILE - 320px to 479px */
 @media (max-width: 479px) {
     .mediaSection {
         padding: 50px 0;

@@ -125,7 +125,6 @@
   }
 }
 
-/* Mobile landscape and below */
 @media (max-width: 768px) {
   .topbarMain {
     height: auto;
@@ -174,7 +173,6 @@
   }
 }
 
-/* Small mobile */
 @media (max-width: 480px) {
   .topbarMain {
     padding: 8px 5px;
@@ -218,7 +216,6 @@
   }
 }
 
-/* Extra small mobile (320px) */
 @media (max-width: 375px) {
   .topbarMain {
     padding: 6px 3px;

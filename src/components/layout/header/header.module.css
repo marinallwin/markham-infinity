@@ -119,7 +119,6 @@
   transform: translateX(-50%);
 }
 
-/* Tablet and below */
 @media (max-width: 1024px) {
   .container {
     width: 92%;
@@ -134,7 +133,6 @@
   }
 }
 
-/* Mobile landscape and below */
 @media (max-width: 768px) {
   .main {
     height: auto;
@@ -249,7 +247,6 @@
   }
 }
 
-/* Small mobile */
 @media (max-width: 480px) {
   .container {
     width: 98%;
@@ -285,7 +282,6 @@
   }
 }
 
-/* Extra small mobile (320px) */
 @media (max-width: 375px) {
   .container {
     width: 100%;

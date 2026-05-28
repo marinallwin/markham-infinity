@@ -20,7 +20,6 @@ function WelcomeSection() {
       }}
     >
       <div className={styles.container}>
-        {/* HEADER */}
         <div className={styles.header}>
           <h2>WELCOME TO MARKHAM INFINITI</h2>
 
@@ -33,11 +32,8 @@ function WelcomeSection() {
           </p>
         </div>
 
-        {/* CARDS */}
         <div className={styles.cardsWrapper}>
-          {/* CARD 1 */}
           <div className={styles.diamondCard}>
-            {/* Backgrounds */}
             <img
               src={gray_bg}
               alt=""
@@ -50,7 +46,6 @@ function WelcomeSection() {
               className={`${styles.diamondBg} ${styles.hoverBg}`}
             />
 
-            {/* Small Diamond on Hover */}
             <div className={styles.smallDiamond}>
               <img src={family_owned_hover} alt="" />
             </div>
@@ -71,9 +66,7 @@ function WelcomeSection() {
             </div>
           </div>
 
-          {/* CARD 2 */}
           <div className={styles.diamondCard}>
-            {/* Backgrounds */}
             <img
               src={gray_bg}
               alt=""
@@ -86,7 +79,6 @@ function WelcomeSection() {
               className={`${styles.diamondBg} ${styles.hoverBg}`}
             />
 
-            {/* Small Diamond on Hover */}
             <div className={styles.smallDiamond}>
               <img src={dedicated_hover} alt="" />
             </div>
@@ -115,9 +107,7 @@ function WelcomeSection() {
             </div>
           </div>
 
-          {/* CARD 3 */}
           <div className={styles.diamondCard}>
-            {/* Backgrounds */}
             <img
               src={gray_bg}
               alt=""
@@ -130,7 +120,6 @@ function WelcomeSection() {
               className={`${styles.diamondBg} ${styles.hoverBg}`}
             />
 
-            {/* Small Diamond on Hover */}
             <div className={styles.smallDiamond}>
               <img src={professional_hover} alt="" />
             </div>

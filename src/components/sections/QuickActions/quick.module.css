@@ -1,4 +1,3 @@
-/* DESKTOP - Default styles */
 .sectionMain {
     width: 100%;
     display: flex;
@@ -32,7 +31,6 @@
     flex-shrink: 0;
 }
 
-/* Downward triangle at bottom (default state) */
 .card::after {
     content: '';
     position: absolute;
@@ -47,18 +45,15 @@
     transition: all 0.3s ease;
 }
 
-/* Hover state */
 .card:hover {
     background: #5f3a93;
     border-color: #5f3a93;
 }
 
-/* Hide bottom triangle on hover */
 .card:hover::after {
     opacity: 0;
 }
 
-/* Upward triangle at top on hover */
 .card:hover::before {
     content: '';
     position: absolute;
@@ -112,7 +107,6 @@
     width: auto;
 }
 
-/* TABLET LANDSCAPE - 768px to 1023px */
 @media (max-width: 1023px) and (min-width: 768px) {
     .sectionMain {
         padding: 55px 0;
@@ -160,7 +154,6 @@
     }
 }
 
-/* TABLET - 480px to 767px (2x2 grid) */
 @media (max-width: 767px) and (min-width: 480px) {
     .sectionMain {
         padding: 50px 0;
@@ -215,7 +208,6 @@
     }
 }
 
-/* MOBILE - 320px to 479px (1 column - vertical stack) */
 @media (max-width: 479px) {
     .sectionMain {
         padding: 40px 0;
