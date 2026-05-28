@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./header.module.css";
 import banner from "../../../assets/banner.png";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/Logo.png";
 import Navbar from "./Navbar";
 import Topbar from "./Topbar";
 
