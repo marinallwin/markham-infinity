@@ -21,14 +21,14 @@ function Home() {
 
         {/* <ModelShowroom /> */}
 
-        {/* <WelcomeSection /> */}
+        <WelcomeSection />
 
         <MediaSection />
 
         <ContactSection />
       </main>
 
-      <Footer />
+      <Footer />/
     </>
   );
 }
