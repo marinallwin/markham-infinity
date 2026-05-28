@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./model.module.css";
 import car_01 from "../../../assets/car_01.png";
 import car_02 from "../../../assets/car_02.png";
@@ -37,6 +37,25 @@ function ModelShowroom() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(4);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 480) {
+        setVisibleCards(1);
+      } else if (window.innerWidth < 768) {
+        setVisibleCards(2);
+      } else if (window.innerWidth < 1024) {
+        setVisibleCards(3);
+      } else {
+        setVisibleCards(4);
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? models.length - 1 : prev - 1));
@@ -48,7 +67,7 @@ function ModelShowroom() {
 
   const getVisibleModels = () => {
     const visible = [];
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < visibleCards; i++) {
       visible.push(models[(currentIndex + i) % models.length]);
     }
     return visible;

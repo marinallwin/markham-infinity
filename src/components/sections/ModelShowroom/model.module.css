@@ -1,7 +1,9 @@
+/* DESKTOP - Default styles (4 cards) */
 .modelShowroom {
     width: 100%;
     padding: 80px 0;
     background: #f8f8f8;
+    overflow: hidden;
 }
 
 .container {
@@ -12,7 +14,6 @@
 }
 
 /* HEADER */
-
 .header {
     margin-bottom: 40px;
     padding-left: 60px;
@@ -27,6 +28,7 @@
     border-bottom: 3px solid #ccc;
     position: relative;
     width: max-content;
+    margin: 0;
 }
 
 .header h2::before {
@@ -52,7 +54,6 @@
 
 .carouselWrapper {
     width: 90%;
-    /* border-right: 2px solid grey; */
     border-left: 2px solid grey;
     display: flex;
     position: relative;
@@ -64,11 +65,10 @@
     flex-direction: column;
     gap: 10px;
     position: relative;
-    width: 25%;
-    padding: 20px 0px;
+    flex: 1;
+    padding: 20px 10px;
     border-right: 2px solid grey;
     background: #fff;
-    position: relative;
 }
 
 .carouselCard:nth-child(even) {
@@ -79,7 +79,7 @@
     font-size: 20px;
     font-weight: 700;
     color: #aaa;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
     letter-spacing: 0.5px;
 }
 
@@ -103,13 +103,15 @@
     font-size: 14px;
     color: #aaa;
     font-weight: 400;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .plusIcon {
     position: absolute;
     bottom: 0;
     right: 0;
+    width: auto;
+    height: auto;
 }
 
 .arrowBtn {
@@ -143,3 +145,220 @@
     object-fit: contain;
 }
 
+/* TABLET LANDSCAPE - 768px to 1023px (3 cards) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .modelShowroom {
+        padding: 70px 0;
+    }
+
+    .header {
+        margin-bottom: 35px;
+        padding-left: 40px;
+    }
+
+    .header h2 {
+        font-size: 26px;
+        padding-bottom: 10px;
+    }
+
+    .header h2::before {
+        bottom: -20px;
+        border-left: 18px solid #999;
+        border-bottom: 18px solid transparent;
+    }
+
+    .carouselWrapper {
+        width: 92%;
+    }
+
+    .carouselCard {
+        padding: 18px 10px;
+        gap: 8px;
+    }
+
+    .carouselCard h3 {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .carImage {
+        min-height: 110px;
+        margin-bottom: 16px;
+    }
+
+    .carImage img {
+        max-width: 180px;
+    }
+
+    .price {
+        font-size: 13px;
+    }
+
+    .plusIcon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .arrowBtn:first-child {
+        left: -25px;
+    }
+
+    .arrowBtn:last-child {
+        right: -25px;
+    }
+
+    .arrowBtn img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* TABLET - 480px to 767px (2 cards) */
+@media (max-width: 767px) and (min-width: 480px) {
+    .modelShowroom {
+        padding: 60px 0;
+    }
+
+    .header {
+        margin-bottom: 30px;
+        padding-left: 20px;
+    }
+
+    .header h2 {
+        font-size: 24px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #ccc;
+    }
+
+    .header h2::before {
+        bottom: -19px;
+        border-left: 17px solid #999;
+        border-bottom: 17px solid transparent;
+        border-top: 2px solid transparent;
+    }
+
+    .carouselWrapper {
+        width: 90%;
+    }
+
+    .carouselCard {
+        padding: 20px 15px;
+        gap: 10px;
+    }
+
+    .carouselCard h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .carImage {
+        min-height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .carImage img {
+        max-width: 170px;
+    }
+
+    .price {
+        font-size: 13px;
+    }
+
+    .plusIcon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .arrowBtn:first-child {
+        left: -22px;
+    }
+
+    .arrowBtn:last-child {
+        right: -22px;
+    }
+
+    .arrowBtn img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* MOBILE - 320px to 479px (1 card) */
+@media (max-width: 479px) {
+    .modelShowroom {
+        padding: 50px 0;
+    }
+
+    .header {
+        margin-bottom: 25px;
+        padding-left: 10px;
+    }
+
+    .header h2 {
+        font-size: 20px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #ccc;
+        word-break: break-word;
+    }
+
+    .header h2::before {
+        bottom: -18px;
+        border-left: 16px solid #999;
+        border-bottom: 16px solid transparent;
+        border-top: 2px solid transparent;
+    }
+
+    .carouselContainer {
+        border-top: 2px solid grey;
+        border-bottom: 2px solid grey;
+    }
+
+    .carouselWrapper {
+        width: 90%;
+    }
+
+    .carouselCard {
+        padding: 25px 20px;
+        gap: 12px;
+    }
+
+    .carouselCard:nth-child(even) {
+        background: #fff;
+    }
+
+    .carouselCard h3 {
+        font-size: 19px;
+        margin-bottom: 15px;
+    }
+
+    .carImage {
+        min-height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .carImage img {
+        max-width: 200px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .plusIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .arrowBtn:first-child {
+        left: -20px;
+    }
+
+    .arrowBtn:last-child {
+        right: -20px;
+    }
+
+    .arrowBtn img {
+        width: 26px;
+        height: 26px;
+    }
+}

@@ -19,7 +19,7 @@ function Home() {
 
         {/* <QuickActions /> */}
 
-        {/* <ModelShowroom /> */}
+        <ModelShowroom />
 
         <WelcomeSection />
 
