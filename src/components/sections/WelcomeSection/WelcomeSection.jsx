@@ -5,7 +5,9 @@ import gray_bg from "../../../assets/gray_bg.png";
 
 import dedicated_hover from "../../../assets/dedicated_hover.png";
 import professional from "../../../assets/professional.png";
+import professional_hover from "../../../assets/professional_hover.png";
 import family_owned from "../../../assets/family_owned.png";
+import family_owned_hover from "../../../assets/family_owned_hover.png";
 
 import readmore from "../../../assets/read-more.png";
 
@@ -48,6 +50,11 @@ function WelcomeSection() {
               className={`${styles.diamondBg} ${styles.hoverBg}`}
             />
 
+            {/* Small Diamond on Hover */}
+            <div className={styles.smallDiamond}>
+              <img src={family_owned_hover} alt="" />
+            </div>
+
             <div className={styles.content}>
               <img
                 src={family_owned}
@@ -78,6 +85,11 @@ function WelcomeSection() {
               alt=""
               className={`${styles.diamondBg} ${styles.hoverBg}`}
             />
+
+            {/* Small Diamond on Hover */}
+            <div className={styles.smallDiamond}>
+              <img src={dedicated_hover} alt="" />
+            </div>
 
             <div
               className={`${styles.content} ${styles.purpleContent}`}
@@ -117,6 +129,11 @@ function WelcomeSection() {
               alt=""
               className={`${styles.diamondBg} ${styles.hoverBg}`}
             />
+
+            {/* Small Diamond on Hover */}
+            <div className={styles.smallDiamond}>
+              <img src={professional_hover} alt="" />
+            </div>
 
             <div className={styles.content}>
               <img

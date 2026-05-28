@@ -6,12 +6,6 @@ import video_right_arw from "../../../assets/video_right_arw.png";
 import video from "../../../assets/video.mp4"
 
 function MediaSection() {
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const handlePlayVideo = () => {
-    setIsPlaying(true);
-  };
-
   return (
     <section className={styles.mediaSection}>
       <div className={styles.container}>

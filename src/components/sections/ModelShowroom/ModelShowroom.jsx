@@ -46,7 +46,6 @@ function ModelShowroom() {
     setCurrentIndex((prev) => (prev === models.length - 1 ? 0 : prev + 1));
   };
 
-  // Get 4 visible cards starting from currentIndex
   const getVisibleModels = () => {
     const visible = [];
     for (let i = 0; i < 4; i++) {
@@ -76,6 +75,7 @@ function ModelShowroom() {
                 </div>
                 <p className={styles.price}>Starting at {model.price}</p>
                 <img src={Plus} alt="View details" className={styles.plusIcon} />
+
               </div>
             ))}
 

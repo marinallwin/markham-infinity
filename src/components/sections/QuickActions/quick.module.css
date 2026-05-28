@@ -26,6 +26,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     background: #fff;
+    position: relative;
 }
 
 /* Downward triangle at bottom (default state) */
@@ -101,4 +102,9 @@
 
 .dashedOne {
     position: absolute;
+}
+
+.shadow {
+    position: absolute;
+    bottom: -50px;
 }
