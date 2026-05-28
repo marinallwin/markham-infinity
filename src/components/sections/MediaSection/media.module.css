@@ -159,6 +159,13 @@
     cursor: pointer;
 }
 
+.videoIframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 3px;
+}
+
 .playButton {
     position: absolute;
     width: 70px;
@@ -203,6 +210,14 @@
     font-weight: 700;
     letter-spacing: 1px;
     line-height: 1.2;
+}
+
+
+.videoPlayer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* RESPONSIVE */

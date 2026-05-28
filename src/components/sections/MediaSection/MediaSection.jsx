@@ -1,9 +1,17 @@
+import { useState } from "react";
 import styles from "./media.module.css";
 import event from "../../../assets/event.png";
 import video_left_arw from "../../../assets/video_left_arw.png";
 import video_right_arw from "../../../assets/video_right_arw.png";
+import video from "../../../assets/video.mp4"
 
 function MediaSection() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayVideo = () => {
+    setIsPlaying(true);
+  };
+
   return (
     <section className={styles.mediaSection}>
       <div className={styles.container}>
@@ -12,12 +20,12 @@ function MediaSection() {
           <div className={styles.sectionHeader}>
             <h2>NEWS AND EVENTS</h2>
             <div className={styles.navButtons}>
-              {/* <button className={styles.navBtn}> */}
+              <button className={styles.navBtn}>
                 <img src={video_left_arw} alt="Previous" />
-              {/* </button> */}
-              {/* <button className={styles.navBtn}> */}
+              </button>
+              <button className={styles.navBtn}>
                 <img src={video_right_arw} alt="Next" />
-              {/* </button> */}
+              </button>
             </div>
           </div>
 
@@ -46,11 +54,15 @@ function MediaSection() {
               Infiniti Canada fan surprised with Trip of a Lifetime
             </p>
             <div className={styles.videoPlaceholder}>
-              <div className={styles.playButton}>▶</div>
-              <div className={styles.videoOverlay}>
-                <p className={styles.videoText}>THE INFINITI</p>
-                <p className={styles.videoTextLarge}>MYSTERY BOX GAME</p>
-              </div>
+
+              <video
+                className={styles.videoPlayer}
+                src={video}
+                controls
+                autoPlay
+                // muted
+                loop
+              />
             </div>
           </div>
         </div>
