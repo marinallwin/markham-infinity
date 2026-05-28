@@ -1,3 +1,4 @@
+/* DESKTOP - Default styles */
 .contactMain {
   height: 400px;
   width: 100%;
@@ -11,6 +12,8 @@
   position: relative;
   flex-direction: column;
   gap: 80px;
+  padding: 0;
+  overflow: hidden;
 }
 
 .contactMain::before {
@@ -31,16 +34,22 @@
 
 .contactTop {
   display: flex;
+  flex-direction: row;
   gap: 20px;
+  width: auto;
+  align-items: flex-start;
 }
 
 .detailsContainer {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-align: left;
+  min-width: auto;
 }
 
 .dashed {
+  display: block;
   height: 60px;
   border-right: 2px dashed grey;
 }
@@ -49,6 +58,7 @@ h3,
 h5 {
   color: white;
   font-weight: 500;
+  margin: 0;
 }
 
 h3 {
@@ -57,11 +67,13 @@ h3 {
 
 h5 {
   font-size: 15px;
+  word-break: break-word;
 }
 
 .iconContainer {
   display: flex;
   gap: 10px;
+  justify-content: flex-start;
 }
 
 .iconContainer img {
@@ -73,7 +85,10 @@ h5 {
 
 .contactBottom {
   display: flex;
+  flex-direction: row;
   gap: 50px;
+  width: auto;
+  align-items: center;
 }
 
 .tile {
@@ -87,7 +102,6 @@ h5 {
   align-items: center;
   cursor: pointer;
   position: relative;
-
   transition:
     transform 0.3s ease,
     background-color 0.3s ease;
@@ -103,7 +117,6 @@ h5 {
 .tile:hover {
   transform: translateY(-30px);
   background-color: #5f3a93;
-  /* purple */
 }
 
 .tile:hover h3 {
@@ -114,14 +127,11 @@ h5 {
 .tile:hover::before {
   content: "";
   position: absolute;
-
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
-
   width: 0;
   height: 0;
-
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 15px solid #5f3a93;
@@ -130,4 +140,238 @@ h5 {
 .tile img {
   height: 20px;
   width: 20px;
+}
+
+/* TABLET LANDSCAPE - 768px to 1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .contactMain {
+    min-height: 450px;
+    height: auto;
+    gap: 60px;
+    padding: 50px 20px;
+    width: auto;
+  }
+
+  .contactTop {
+    flex-wrap: wrap;
+    gap: 15px 20px;
+    max-width: 95%;
+    justify-content: center;
+  }
+
+  .detailsContainer {
+    gap: 13px;
+    text-align: center;
+  }
+
+  .dashed {
+    height: 50px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  .iconContainer {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .iconContainer img {
+    height: 24px;
+    width: 24px;
+  }
+
+  .contactBottom {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .tile {
+    width: 220px;
+    height: 78px;
+  }
+
+  .tile h3 {
+    font-size: 17px;
+  }
+
+  .tile:hover {
+    transform: translateY(-28px);
+  }
+
+  .tile:hover::before {
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #5f3a93;
+  }
+
+  .tile img {
+    height: 19px;
+    width: 19px;
+  }
+}
+
+/* TABLET - 480px to 767px */
+@media (max-width: 767px) and (min-width: 480px) {
+  .contactMain {
+    min-height: 550px;
+    height: auto;
+    gap: 50px;
+    padding: 40px 15px;
+    width: auto;
+  }
+
+  .contactTop {
+    flex-direction: column;
+    gap: 25px;
+    max-width: 90%;
+    align-items: center;
+  }
+
+  .detailsContainer {
+    gap: 12px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .dashed {
+    display: none;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 13px;
+  }
+
+  .iconContainer {
+    justify-content: center;
+  }
+
+  .iconContainer img {
+    height: 23px;
+    width: 23px;
+  }
+
+  .contactBottom {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 25px;
+    justify-content: center;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .tile {
+    width: 220px;
+    height: 75px;
+  }
+
+  .tile h3 {
+    font-size: 16px;
+  }
+
+  .tile:hover {
+    transform: translateY(-25px);
+  }
+
+  .tile:hover::before {
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 13px solid #5f3a93;
+  }
+
+  .tile img {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+/* MOBILE - 320px to 479px */
+@media (max-width: 479px) {
+  .contactMain {
+    min-height: 600px;
+    height: auto;
+    gap: 40px;
+    padding: 30px 10px;
+    width: auto;
+  }
+
+  .contactTop {
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    max-width: 300px;
+    align-items: center;
+  }
+
+  .detailsContainer {
+    gap: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .dashed {
+    display: none;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  h5 {
+    font-size: 12px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .iconContainer {
+    justify-content: center;
+  }
+
+  .iconContainer img {
+    height: 22px;
+    width: 22px;
+  }
+
+  .contactBottom {
+    flex-direction: column;
+    gap: 45px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .tile {
+    width: 90%;
+    max-width: 280px;
+    height: 70px;
+  }
+
+  .tile h3 {
+    font-size: 15px;
+  }
+
+  .tile:hover {
+    transform: translateY(-20px);
+  }
+
+  .tile:hover::before {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #5f3a93;
+  }
+
+  .tile img {
+    height: 17px;
+    width: 17px;
+  }
 }
