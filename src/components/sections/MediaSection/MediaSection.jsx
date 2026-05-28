@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./media.module.css";
 import event from "../../../assets/event.png";
 import video_left_arw from "../../../assets/video_left_arw.png";
@@ -14,12 +13,8 @@ function MediaSection() {
           <div className={styles.sectionHeader}>
             <h2>NEWS AND EVENTS</h2>
             <div className={styles.navButtons}>
-              <button className={styles.navBtn}>
                 <img src={video_left_arw} alt="Previous" />
-              </button>
-              <button className={styles.navBtn}>
                 <img src={video_right_arw} alt="Next" />
-              </button>
             </div>
           </div>
 

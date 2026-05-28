@@ -23,7 +23,7 @@ function Home() {
 
         {/* <WelcomeSection /> */}
 
-        {/* <MediaSection /> */}
+        <MediaSection />
 
         <ContactSection />
       </main>
