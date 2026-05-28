@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './quick.module.css'
-import Dotted_01 from "../../../assets/dotted_01.png"
+import Dotted_01 from "../../../assets/Dotted_01.png"
 import Dotted_02 from "../../../assets/dotted_02.png"
 import Dotted_03 from "../../../assets/dotted_03.png"
 import cta_01 from "../../../assets/cta_01.png"
