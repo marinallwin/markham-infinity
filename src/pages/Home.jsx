@@ -17,7 +17,7 @@ function Home() {
       <main>
         {/* <HeroSection /> */}
 
-        {/* <QuickActions /> */}
+        <QuickActions />
 
         <ModelShowroom />
 
@@ -28,7 +28,7 @@ function Home() {
         <ContactSection />
       </main>
 
-      <Footer />/
+      <Footer />
     </>
   );
 }
