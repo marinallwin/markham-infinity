@@ -5,7 +5,7 @@ import Dotted_02 from "../../../assets/dotted_02.png"
 import Dotted_03 from "../../../assets/dotted_03.png"
 import cta_01 from "../../../assets/cta_01.png"
 import cta_02 from "../../../assets/cta_02.png"
-import cta_03 from "../../../assets/cta_03.png"
+import cta_03 from "../../../assets/CTA_03.png"
 import cta_04 from "../../../assets/cta_04.png"
 import shadow from "../../../assets/shadow.png"
 
